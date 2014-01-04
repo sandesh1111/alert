@@ -346,7 +346,7 @@ if(role_name.equals("Manager")){
    else if(emp_inmonthly==1){  
         ResultSet rs_status_m=st.executeQuery("Select * from et_alert_statusdetail WHERE role_id='"+role_id+"' AND alert_date='"+dateNow+"' AND alert_mode='M' AND alert_for='Employee expence amount'");
         while(rs_status_m.next()){ cont_empp++;}
-        if(cont_empp==0){
+        if(cont_empp==0){  // changeing the structure of program
          if(dateNow.equals(monthfirstdt)){
         ResultSet rs_emp_expence=st.executeQuery("SELECT SUM(empex_travelamt) AS trvel,SUM(empex_mealamt) AS meal,SUM(empex_fuelamt) AS fuel,SUM(empex_hotelamt) AS hotel,SUM(empex_phoneamt) AS phone,SUM(empex_otheramt) AS other FROM et_emp_expanditure WHERE empex_date BETWEEN '"+lastm_frstdt+"'AND'"+dateNow+"'");
         if(rs_emp_expence.next()){ emp_travel=rs_emp_expence.getDouble("trvel");
