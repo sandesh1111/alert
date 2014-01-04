@@ -9,7 +9,7 @@
     <td class="Close" onclick="new Ajax.Updater('NewAlertMessages', '../alert/alert_list_incl_popup.jsp', {asynchronous:true}); ReverseContentDisplay('NewAlertMessages'); return true;">
         <a href="javascript:;" title="Close"></a>
     </td>
-    </tr>
+    </tr> 
     </table>
 </div><!--SbmPopupTitle-->
 <div class="SbmPopupContent">
@@ -68,7 +68,7 @@
           else if(alert_for.equals("Despatch bale")){temp=dis_minm; temp2=dis_avgm; lab_min="Min val=";}  
           else if(alert_for.equals("Revenue detail")){temp=rev_minamt; temp2=rev_avgamt; lab_min="Min val=";}
           else{ lab_min="";lab_avg="";}   
-          if(val>=temp && val<=temp2){
+          if(val>=temp && val<=temp2){ //sandesh changing file
           %>
           <td><%=lab_min%><%=temp%><br><%=lab_avg%><%=temp2%></td><td><font color="orange">Current val=<%=val%></font></td>
           <% 
